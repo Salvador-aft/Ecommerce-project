@@ -1,0 +1,182 @@
+@font-face {
+  font-family: 'Anton';
+  src: url('../../assets//font/Anton-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.background-container {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ff0000;
+  background-image: radial-gradient(circle at center, rgba(252, 71, 71, 0.981) 0%, rgba(0, 0, 0, 0.3) 100%);
+  transition: background-color 2s ease-in-out, background-image 2s ease-in-out;
+  user-select: none;
+  cursor: default;
+}
+
+.background-state-2 {
+  background-color: #039303c5;
+  background-image: radial-gradient(circle at center, #579a57 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.background-state-3 {
+  background-color: #000000;
+  background-image: radial-gradient(circle at center, rgba(60, 60, 60, 0.457) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.shoe-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.buttons-container {
+
+  margin-bottom: 40px;
+  font-family: sans-serif;
+
+}
+
+.buttons-wrapper button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  margin-right: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, border 0.3s;
+  font-family: anto;
+}
+
+.buttons-wrapper button.red {
+  background-color: #b22222; /* Rojo oscuro */
+}
+
+.buttons-wrapper button.green {
+  background-color: #049d04; /* Verde oscuro */
+}
+
+.buttons-wrapper button.black {
+  background-color: #1d1c1c; /* Negro claro */
+}
+
+.buttons-wrapper button.active {
+  border: 2px solid white;
+}
+
+.buttons-wrapper button.red:hover {
+  background-color: #ff0000; /* Rojo más oscuro */
+}
+
+.buttons-wrapper button.green:hover {
+  background-color: #00ff00; /* Verde más oscuro */
+}
+
+.buttons-wrapper button.black:hover {
+  background-color: #000000; /* Negro más claro */
+}
+
+.text{
+  color:#d6d6d6
+}
+
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleX(1.0);
+  font-size: 600px;
+  color: #f7f4f4fe;
+  font-weight: bold;
+  z-index: 0;
+  pointer-events: none;
+  font-family: 'Anton';
+}
+
+.text-explain{
+  font-family: sans-serif;
+}
+
+.d-flex .border-arrow:first-child {
+  margin-right: 40px;
+}
+
+.border-arrow {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  border: 2px white solid;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s;
+}
+
+.border-arrow:hover {
+  border-color: rgba(201, 201, 198, 0.5); /* Cambia el color del borde al hacer hover */
+}
+
+.arrow-left, .arrow-right {
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.arrow-left {
+  display: inline-block;
+  position: relative;
+  width: 80px; /* Ajusta el ancho según sea necesario */
+  height: 1px; /* Ajusta la altura según sea necesario */
+  background-color: white; /* Cambia el color según sea necesario */
+}
+
+.arrow-left::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0px; /* Desplaza el pseudo-elemento hacia la izquierda */
+  width: 16px; /* Ajusta el ancho de la flecha */
+  height: 16px; /* Ajusta la altura de la flecha */
+  border-left: 2px solid white; /* Ajusta el grosor y color de la línea */
+  border-top: 2px solid white; /* Ajusta el grosor y color de la línea */
+  transform: translateY(-46%) rotate(-45deg); /* Ajusta la rotación para formar la punta de flecha */
+}
+
+.arrow-right {
+  display: inline-block;
+  position: relative;
+  width: 80px; /* Ajusta el ancho según sea necesario */
+  height: 1px; /* Ajusta la altura según sea necesario */
+  background-color: white; /* Cambia el color según sea necesario */
+}
+
+.arrow-right::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0px; /* Desplaza el pseudo-elemento hacia la izquierda */
+  width: 16px; /* Ajusta el ancho de la flecha */
+  height: 16px; /* Ajusta la altura de la flecha */
+  border-left: 2px solid white; /* Ajusta el grosor y color de la línea */
+  border-top: 2px solid white; /* Ajusta el grosor y color de la línea */
+  transform: translateY(-46%) rotate(135deg); /* Ajusta la rotación para formar la punta de flecha */
+}
+
+.border-arrow:hover .arrow-left,
+.border-arrow:hover .arrow-right {
+  background-color: rgba(201, 201, 198, 0.5); /* Cambia el color de las flechas al hacer hover */
+}
+
+.border-arrow:hover .arrow-left::before,
+.border-arrow:hover .arrow-right::after {
+  border-color: rgba(201, 201, 198, 0.5); /* Cambia el color de los bordes de las flechas al hacer hover */
+}
